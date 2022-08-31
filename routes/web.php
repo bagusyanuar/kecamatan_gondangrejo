@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\HomepageController::class, 'index']);
 Route::get('/kontak', [\App\Http\Controllers\HomepageController::class, 'contact']);
 Route::match(['post', 'get'], '/login-admin', [\App\Http\Controllers\Admin\AuthController::class, 'login']);
+Route::get('/', [\App\Http\Controllers\Admin\AuthController::class, 'logout']);
 Route::group(['prefix' => 'pengaduan'], function () {
     Route::get('/', [\App\Http\Controllers\PengaduanController::class, 'index']);
     Route::post('/create', [\App\Http\Controllers\PengaduanController::class, 'store']);
