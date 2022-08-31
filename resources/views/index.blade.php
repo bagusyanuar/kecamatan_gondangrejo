@@ -1,6 +1,17 @@
 @extends('layout')
 
 @section('content')
+    @if (\Illuminate\Support\Facades\Session::has('failed'))
+        <script>
+            Swal.fire("Gagal", '{{\Illuminate\Support\Facades\Session::get('failed')}}', "error")
+        </script>
+    @endif
+
+    @if (\Illuminate\Support\Facades\Session::has('success'))
+        <script>
+            Swal.fire("Berhasil", '{{\Illuminate\Support\Facades\Session::get('success')}}', "success")
+        </script>
+    @endif
     <section>
         <div class="gambar-depan">
             <p class="w-100"
@@ -168,7 +179,8 @@
         </div>
     </section>
     <hr style="border-color: var(--accentColor); margin-top: 7em;" class="container">
-    <section class="container-fluid mt-5 text-center p-5" style="position: relative; background-image: url('../assets/images/aduan.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <section class="container-fluid mt-5 text-center p-5"
+             style="position: relative; background-image: url('../assets/images/aduan.jpg'); background-repeat: no-repeat; background-size: cover;">
         <div class="cover-black-all"></div>
         <div class="d-flex justify-content-center align-items-center h-100 flex-column front">
             <a class="sukmatrip font-weight-bold" style="color: var(--accentColor);">ADUAN MASYARAKAT</a>
@@ -181,22 +193,23 @@
                                 Form Pengaduan
                             </p>
                             <hr>
-                            <form method="post">
+                            <form method="post" action="/pengaduan/create">
                                 @csrf
                                 <div class="form-group">
                                     <label for="nama" class="text-left w-100">Nama</label>
                                     <input type="text" class="form-control form-data-input" id="nama"
-                                           aria-describedby="namaHelp" placeholder="Nama" name="pemesan" required>
+                                           aria-describedby="namaHelp" placeholder="Nama" name="nama" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="no_telp" class="text-left w-100">No. Handphone / Whatsapp</label>
-                                    <input type="number" class="form-control form-data-input" id="no_telp"
-                                           aria-describedby="namaHelp" placeholder="Nama" name="no_telp" required>
+                                    <label for="no_hp" class="text-left w-100">No. Handphone / Whatsapp</label>
+                                    <input type="number" class="form-control form-data-input" id="no_hp"
+                                           aria-describedby="namaHelp" placeholder="Nama" name="no_hp" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="aduan" class="text-left w-100">Aduan</label>
-                                    <textarea rows="3" class="form-control form-data-input" id="aduan"
-                                              aria-describedby="aduan" placeholder="Isi Pengaduan" name="aduan" required></textarea>
+                                    <label for="pengaduan" class="text-left w-100">Aduan</label>
+                                    <textarea rows="3" class="form-control form-data-input" id="pengaduan"
+                                              aria-describedby="aduan" placeholder="Isi Pengaduan" name="pengaduan"
+                                              required></textarea>
                                 </div>
                                 <hr>
                                 <div class="text-right w-100">

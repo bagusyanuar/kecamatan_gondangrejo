@@ -18,4 +18,9 @@ class HomepageController extends CustomController
     {
         return view('index');
     }
+
+    public function contact()
+    {
+        return view('kontak');
+    }
 }

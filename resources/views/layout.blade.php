@@ -14,11 +14,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link href="{{ asset('/css/sweetalert2.css') }}" rel="stylesheet">
+    <script src="{{ asset('/js/sweetalert2.min.js')}}"></script>
     <style>
+
         html {
             scroll-behavior: smooth;
         }
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            .brand-text{
+                display: none;
+            }
+        }
     </style>
+    @yield('css')
 </head>
 <body>
 
@@ -32,7 +43,10 @@
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <span style="font-size: 16px;" class="font-weight-bold">KEC. <span style="color: var(--accentColor);">GONDANGREJO</span></span>
+            <div class="brand-text">
+                <span style="font-size: 16px;" class="font-weight-bold">SIAP <span style="color: var(--accentColor);">MAS</span></span>
+            </div>
+
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a class="text-sm ml-5  f08 navitem" href="/">BERANDA<span
@@ -59,7 +73,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-lg-4 col-sm-12">
                 <p class="f16">
                     <i class="fa fa-phone-square mr-2"></i>
                     Telepon Penting
@@ -105,6 +119,13 @@
                 <p>
                     (0271) 495091
                 </p>
+            </div>
+            <div class="col-md-5 col-lg-5 col-sm-12">
+                <p class="f16">
+                    <i class="fa fa-map-marker mr-2"></i>
+                    Peta Kec. Gondangrejo
+                </p>
+                <img src="{{ asset('/assets/images/gondangrejo-peta.jpg') }}" class="w-100">
             </div>
         </div>
     </div>
