@@ -1,5 +1,18 @@
 @extends('layout')
 
+@section('css')
+    <style>
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            .sub-greeting-1 {
+                bottom: 200px !important;
+            }
+            .sub-greeting-2 {
+                bottom: 150px !important;
+            }
+        }
+    </style>
+@endsection
 @section('content')
     @if (\Illuminate\Support\Facades\Session::has('failed'))
         <script>
@@ -15,11 +28,15 @@
     <section>
         <div class="gambar-depan">
             <p class="w-100"
-               style="position: absolute; bottom: 250px; z-index: 100; text-align: center; font-size: 2rem; color: white">
-                SELAMAT DATANG DI KECAMATAN GONDANGREJO
+               style="position: absolute; bottom: 250px; z-index: 100; text-align: center; font-size: 2rem; color: white; font-weight: bold">
+                SELAMAT DATANG DI APLIKASI <span style="color: #EB5353">SIAPMASGON</span>
             </p>
-            <p class="w-100"
+            <p class="w-100 sub-greeting-1"
                style="position: absolute; bottom: 220px; z-index: 100; text-align: center; font-size: 1rem; color: white">
+                Sistem Informasi Pengaduan Masyarakat Gondangrejo
+            </p>
+            <p class="w-100 sub-greeting-2"
+               style="position: absolute; bottom: 200px; z-index: 100; text-align: center; font-size: 1rem; color: white">
                 Kami Siap Melayani Pengaduan Masyarakat Secara Online
             </p>
             <div class="imagesContainer">

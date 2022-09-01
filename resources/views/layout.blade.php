@@ -44,7 +44,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="brand-text">
-                <span style="font-size: 16px;" class="font-weight-bold">SIAP <span style="color: var(--accentColor);">MAS</span></span>
+                <span style="font-size: 16px; color: #541690;" class="font-weight-bold">SIAPMASGON</span>
             </div>
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
