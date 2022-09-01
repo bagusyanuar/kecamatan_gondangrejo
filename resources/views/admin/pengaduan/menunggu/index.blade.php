@@ -20,7 +20,11 @@
     </div>
     <section>
         <hr>
-        <p class="font-weight-bold">Tabel Pengaduan Menunggu</p>
+        <div class="d-flex justify-content-between align-items-center p-1 mb-3">
+            <p class="font-weight-bold">Tabel Pengaduan Menunggu</p>
+            <a href="/admin/pengaduan/menunggu/make/export" class="btn btn-success"><i class="fa fa-download mr-2"></i>Excel</a>
+        </div>
+
         <table id="table-data" class="display w-100 table table-bordered">
             <thead>
             <tr>
@@ -56,7 +60,9 @@
     <script src="{{ asset('/js/helper.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#table-data').DataTable();
+            $('#table-data').DataTable({
+                "scrollX": true
+            });
         });
     </script>
 @endsection

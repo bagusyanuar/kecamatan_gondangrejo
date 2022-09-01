@@ -77,7 +77,7 @@
                     <td>{{ $v->no_hp }}</td>
                     <td>{{ $v->pengaduan }}</td>
                     <td class="text-center">
-                        <a href="/admin/pengaduan/{{ $v->id }}" class="btn btn-sm btn-info btn-edit"
+                        <a href="/admin/pengaduan/menunggu/{{ $v->id }}" class="btn btn-sm btn-info btn-edit"
                            data-id="{{ $v->id }}"><i class="fa fa-info"></i></a>
                     </td>
                 </tr>

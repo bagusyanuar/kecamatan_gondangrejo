@@ -26,13 +26,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:web'], function () {
     Route::group(['prefix' => 'pengaduan'], function () {
         Route::group(['prefix' => 'menunggu'], function () {
             Route::get('/', [\App\Http\Controllers\Admin\PengaduanController::class, 'waiting']);
+            Route::get('/make/export', [\App\Http\Controllers\Admin\PengaduanController::class, 'waiting_excel']);
             Route::match(['post', 'get'], '/{id}', [\App\Http\Controllers\Admin\PengaduanController::class, 'detail_waiting']);
         });
         Route::group(['prefix' => 'terima'], function () {
             Route::get('/', [\App\Http\Controllers\Admin\PengaduanController::class, 'accepted']);
+            Route::get('/export', [\App\Http\Controllers\Admin\PengaduanController::class, 'accepted_excel']);
         });
         Route::group(['prefix' => 'tolak'], function () {
             Route::get('/', [\App\Http\Controllers\Admin\PengaduanController::class, 'denied']);
+            Route::get('/export', [\App\Http\Controllers\Admin\PengaduanController::class, 'denied_excel']);
         });
     });
 });

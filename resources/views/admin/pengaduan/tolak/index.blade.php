@@ -20,7 +20,10 @@
     </div>
     <section>
         <hr>
-        <p class="font-weight-bold">Tabel Pengaduan Di Tolak</p>
+        <div class="d-flex justify-content-between align-items-center p-1 mb-3">
+            <p class="font-weight-bold">Tabel Pengaduan Di Tolak</p>
+            <a href="/admin/pengaduan/tolak/export" class="btn btn-success"><i class="fa fa-download mr-2"></i>Excel</a>
+        </div>
         <table id="table-data" class="display w-100 table table-bordered">
             <thead>
             <tr>
