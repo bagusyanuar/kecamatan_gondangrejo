@@ -37,7 +37,7 @@
                  alt="AdminLTE Logo"
                  class="brand-image"
             >
-            <span class="brand-text font-weight-light">SIAP MAS</span>
+            <span class="brand-text font-weight-light">SIAPMASGON</span>
         </a>
         <div class="my-sidebar-menu">
             <ul class="nav nav-sidebar nav-pills flex-column">

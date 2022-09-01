@@ -50,9 +50,9 @@
             <div class="card">
                 <div class="card-body">
                     <img src="{{ asset('/assets/images/Logo-karanganyar.png') }}" class="w-100 login-icon mb-3"/>
-                    <p class="login-title w-100 text-center mb-0"><span style="color: #FDD100">SIAP</span> MAS</p>
+                    <p class="login-title w-100 text-center mb-0"><span style="color: #FDD100">SIAP</span>MASGON</p>
                     <p class="w-100 text-center" style="letter-spacing: 0.2em;">Sistem informasi pengaduan
-                        masyarakat</p>
+                        masyarakat gondangrejo</p>
                     <hr>
                     <form method="post">
                         @csrf

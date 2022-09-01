@@ -24,9 +24,13 @@
 
         @media only screen and (max-width: 768px) {
             /* For mobile phones: */
-            .brand-text{
+            .brand-text {
                 display: none;
             }
+        }
+
+        .givebgmobile.container {
+            width: auto !important;
         }
     </style>
     @yield('css')
